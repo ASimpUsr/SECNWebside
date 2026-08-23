@@ -157,10 +157,10 @@
 
             <h2>1. 数据收集</h2>
             <p><strong>本应用不收集、不存储、不上传任何您的个人数据。</strong></p>
-            <p>您通过 Gmail OAuth 登录时，仅用于获取访问令牌以收发邮件。所有操作均在您本地设备上完成，您的邮件、联系人、附件等数据永远不会被发送到我们的服务器。</p>
+            <p>您通过 Gmail OAuth 或 Microsoft Graph 登录时，仅用于获取访问令牌以收发邮件。所有操作均在您本地设备上完成，您的邮件、联系人、附件等数据永远不会被发送到我们的服务器。</p>
 
             <h2>2. 数据使用</h2>
-            <p>我们不会以任何形式使用、分析或出售您的数据。OAuth 令牌仅保存在您本地，用于与 Gmail API 通信，且仅在您主动操作（如发送邮件、读取收件箱）时使用。</p>
+            <p>我们不会以任何形式使用、分析或出售您的数据。OAuth 令牌仅保存在您本地，用于与相应 API（Gmail 或 Microsoft Graph）通信，且仅在您主动操作（如发送邮件、读取收件箱）时使用。</p>
 
             <h2>3. 数据共享与披露</h2>
             <p>我们不会与任何第三方共享您的信息，除非法律强制要求（例如应法院传票）。即使在这种情况下，我们也会在披露前尽可能通知您（除非法律禁止）。</p>
@@ -172,7 +172,11 @@
             <p>由于我们不存储任何数据，您无需申请删除或导出数据——所有数据都在您本地，您随时可以通过卸载应用或手动清理目录来彻底删除。</p>
 
             <h2>6. 第三方服务</h2>
-            <p>本应用使用 <strong>Google Gmail API</strong> 来实现邮件功能。您的邮件数据将直接与 Google 服务器交互，请参阅 <a href="https://policies.google.com/privacy" target="_blank">Google 隐私政策</a> 了解 Google 如何处理您的数据。</p>
+            <p>本应用使用以下第三方 API 来实现邮件功能：</p>
+            <ul>
+                <li><strong>Google Gmail API</strong>：用于 Gmail 账户的收发邮件。您的邮件数据将直接与 Google 服务器交互，请参阅 <a href="https://policies.google.com/privacy" target="_blank">Google 隐私政策</a> 了解 Google 如何处理您的数据。</li>
+                <li><strong>Microsoft Graph API</strong>：用于 Outlook / Office 365 账户的收发邮件。您的邮件数据将直接与微软服务器交互，请参阅 <a href="https://privacy.microsoft.com/zh-cn/privacystatement" target="_blank">微软隐私声明</a> 了解微软如何处理您的数据。</li>
+            </ul>
 
             <h2>7. Cookies 与跟踪</h2>
             <p>本应用不使用任何 Cookie、网络信标或第三方跟踪工具。OAuth 流程中使用的临时状态参数仅存在于浏览器会话中，不会持久化。</p>
@@ -198,10 +202,10 @@
 
             <h2>1. Data Collection</h2>
             <p><strong>This application does not collect, store, or upload any of your personal data.</strong></p>
-            <p>When you sign in via Gmail OAuth, it is used solely to obtain an access token for sending and receiving emails. All operations are performed locally on your device. Your emails, contacts, attachments, etc., are never transmitted to our servers.</p>
+            <p>When you sign in via Gmail OAuth or Microsoft Graph, it is used solely to obtain an access token for sending and receiving emails. All operations are performed locally on your device. Your emails, contacts, attachments, etc., are never transmitted to our servers.</p>
 
             <h2>2. Data Usage</h2>
-            <p>We do not use, analyze, or sell your data in any way. OAuth tokens are stored locally and used only for communication with the Gmail API when you perform actions (e.g., sending emails, reading your inbox).</p>
+            <p>We do not use, analyze, or sell your data in any way. OAuth tokens are stored locally and used only for communication with the respective API (Gmail or Microsoft Graph) when you perform actions (e.g., sending emails, reading your inbox).</p>
 
             <h2>3. Data Sharing and Disclosure</h2>
             <p>We do not share your information with any third party unless legally required (e.g., in response to a court subpoena). Even then, we will notify you before disclosure if legally permitted.</p>
@@ -213,7 +217,11 @@
             <p>Because we do not store any data, you do not need to request deletion or export – all data is on your device, and you can delete it completely at any time by uninstalling the app or manually clearing its directory.</p>
 
             <h2>6. Third-Party Services</h2>
-            <p>This application uses the <strong>Google Gmail API</strong> to provide email functionality. Your email data will interact directly with Google's servers. Please refer to <a href="https://policies.google.com/privacy" target="_blank">Google's Privacy Policy</a> to understand how Google handles your data.</p>
+            <p>This application uses the following third‑party APIs to provide email functionality:</p>
+            <ul>
+                <li><strong>Google Gmail API</strong> – for sending/receiving emails with Gmail accounts. Your email data will interact directly with Google's servers. Please refer to <a href="https://policies.google.com/privacy" target="_blank">Google's Privacy Policy</a> to understand how Google handles your data.</li>
+                <li><strong>Microsoft Graph API</strong> – for sending/receiving emails with Outlook / Office 365 accounts. Your email data will interact directly with Microsoft's servers. Please refer to <a href="https://privacy.microsoft.com/en-us/privacystatement" target="_blank">Microsoft's Privacy Statement</a> to understand how Microsoft handles your data.</li>
+            </ul>
 
             <h2>7. Cookies and Tracking</h2>
             <p>This application does not use any cookies, web beacons, or third‑party tracking tools. Temporary state parameters used during OAuth flow exist only in the browser session and are not persisted.</p>
