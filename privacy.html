@@ -5,80 +5,252 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>隐私政策 · SimpleEmailClientNEXT</title>
     <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            max-width: 820px;
-            margin: 40px auto;
-            padding: 20px;
-            line-height: 1.7;
-            color: #1e1e1e;
             background: #fafafa;
+            color: #222;
+            line-height: 1.7;
+            padding: 2rem 1rem;
         }
-        h1, h2 {
-            border-bottom: 1px solid #ddd;
-            padding-bottom: 8px;
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 2.5rem 3rem;
+            border-radius: 12px;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.05);
         }
-        .last-updated {
+        .top-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-bottom: 1.8rem;
+        }
+        .top-bar h1 {
+            font-size: 1.8rem;
+            font-weight: 600;
+        }
+        .top-bar h1 small {
+            font-weight: 400;
+            font-size: 1rem;
             color: #666;
-            font-size: 0.9em;
-            margin-top: -10px;
+            margin-left: 8px;
         }
-        .contact {
+        .lang-switch {
+            display: flex;
+            gap: 6px;
+        }
+        .lang-switch button {
+            background: none;
+            border: 1px solid #ccc;
+            padding: 4px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            color: #333;
+            transition: 0.15s;
+        }
+        .lang-switch button.active {
+            background: #222;
+            color: white;
+            border-color: #222;
+        }
+        .lang-switch button:hover:not(.active) {
             background: #f0f0f0;
-            padding: 12px 18px;
-            border-radius: 6px;
         }
-        a {
+        .nav-links {
+            margin: 0 0 1.5rem 0;
+            display: flex;
+            gap: 1.8rem;
+            flex-wrap: wrap;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 0.8rem;
+        }
+        .nav-links a {
             color: #0366d6;
             text-decoration: none;
+            font-size: 0.95rem;
         }
-        a:hover {
+        .nav-links a:hover {
             text-decoration: underline;
+        }
+        .content .lang {
+            display: none;
+        }
+        .content .lang.active {
+            display: block;
+        }
+        .content h2 {
+            font-size: 1.4rem;
+            font-weight: 500;
+            margin: 1.5rem 0 0.5rem 0;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 0.3rem;
+        }
+        .content p {
+            margin-bottom: 0.8rem;
+        }
+        .content ul {
+            padding-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        .content li {
+            margin-bottom: 0.3rem;
+        }
+        .contact-box {
+            background: #f5f5f5;
+            padding: 0.8rem 1.2rem;
+            border-radius: 6px;
+            margin: 1rem 0;
+        }
+        footer {
+            margin-top: 2.5rem;
+            padding-top: 1rem;
+            border-top: 1px solid #eee;
+            font-size: 0.85rem;
+            color: #777;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        footer a {
+            color: #555;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+        @media (max-width: 600px) {
+            .container { padding: 1.5rem; }
+            .top-bar { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
         }
     </style>
 </head>
 <body>
-    <h1>📄 隐私政策</h1>
-    <p class="last-updated"><strong>最后更新：</strong>2026 年 8 月 24 日</p>
+<div class="container">
 
-    <p><strong>SimpleEmailClientNEXT</strong>（以下简称“本应用”）致力于保护您的隐私。本隐私政策说明我们如何处理您的信息。</p>
-
-    <h2>1. 数据收集</h2>
-    <p><strong>本应用不收集、不存储、不上传任何您的个人数据。</strong></p>
-    <p>您通过 Gmail OAuth 登录时，<strong>仅用于</strong>获取访问令牌以收发邮件。所有操作均在您本地设备上完成，<strong>您的邮件、联系人、附件等数据永远不会被发送到我们的服务器</strong>。</p>
-
-    <h2>2. 数据使用</h2>
-    <p>我们不会以任何形式使用、分析或出售您的数据。OAuth 令牌仅保存在您本地，用于与 Gmail API 通信，且仅在您主动操作（如发送邮件、读取收件箱）时使用。</p>
-
-    <h2>3. 数据共享与披露</h2>
-    <p>我们<strong>不会</strong>与任何第三方共享您的信息，除非法律强制要求（例如应法院传票）。即使在这种情况下，我们也会在披露前尽可能通知您（除非法律禁止）。</p>
-
-    <h2>4. 数据存储与安全</h2>
-    <p>所有数据（包括 OAuth 令牌、邮件缓存等）均保存在您的本地设备上，由您完全掌控。我们不会在云端保存任何副本。我们采用操作系统提供的安全存储（如 Windows Credential Manager）来保护令牌，但您仍需自行确保设备安全。</p>
-
-    <h2>5. 用户权利</h2>
-    <p>由于我们不存储任何数据，您无需申请删除或导出数据——所有数据都在您本地，您随时可以通过卸载应用或手动清理目录来彻底删除。</p>
-
-    <h2>6. 第三方服务</h2>
-    <p>本应用使用 <strong>Google Gmail API</strong> 来实现邮件功能。您的邮件数据将直接与 Google 服务器交互，请参阅 <a href="https://policies.google.com/privacy" target="_blank">Google 隐私政策</a> 了解 Google 如何处理您的数据。</p>
-
-    <h2>7. Cookies 与跟踪</h2>
-    <p>本应用<strong>不使用任何 Cookie、网络信标或第三方跟踪工具</strong>。OAuth 流程中使用的临时状态参数仅存在于浏览器会话中，不会持久化。</p>
-
-    <h2>8. 变更通知</h2>
-    <p>如果我们对本政策进行重大变更，会通过应用内的更新日志或 GitHub Release 通知您。本页面顶部会显示“最后更新”日期。</p>
-
-    <h2>9. 联系方式</h2>
-    <div class="contact">
-        <p>📧 如有隐私相关问题，请通过 GitHub Issues 联系我们：<br>
-        <a href="https://github.com/ASimpUsr/SimpleEmailClientNEXT/issues" target="_blank">
-            https://github.com/ASimpUsr/SimpleEmailClientNEXT/issues
-        </a></p>
-        <p>您也可以直接查看项目源码，所有实现均为开源透明。</p>
+    <!-- 顶栏 -->
+    <div class="top-bar">
+        <h1>📄 隐私政策 <small>Privacy Policy</small></h1>
+        <div class="lang-switch">
+            <button id="lang-zh" class="active" onclick="switchLang('zh')">中文</button>
+            <button id="lang-en" onclick="switchLang('en')">EN</button>
+        </div>
     </div>
 
-    <p style="margin-top: 30px; font-size: 0.9em; color: #888;">
-        本政策采用 <a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank">CC0</a> 协议，可自由复制修改。
-    </p>
+    <!-- 导航 -->
+    <div class="nav-links">
+        <a href="https://asimpusr.github.io/SECNWebside/">首页 / Home</a>
+        <a href="https://github.com/ASimpUsr/SimpleEmailClientNEXT" target="_blank">GitHub</a>
+        <a href="https://github.com/ASimpUsr/SimpleEmailClientNEXT/issues" target="_blank">反馈 / Issues</a>
+    </div>
+
+    <!-- 内容 -->
+    <div class="content">
+
+        <!-- 中文 -->
+        <div id="zh" class="lang active">
+            <p><strong>最后更新：</strong>2026 年 8 月 24 日</p>
+
+            <h2>1. 数据收集</h2>
+            <p><strong>本应用不收集、不存储、不上传任何您的个人数据。</strong></p>
+            <p>您通过 Gmail OAuth 登录时，仅用于获取访问令牌以收发邮件。所有操作均在您本地设备上完成，您的邮件、联系人、附件等数据永远不会被发送到我们的服务器。</p>
+
+            <h2>2. 数据使用</h2>
+            <p>我们不会以任何形式使用、分析或出售您的数据。OAuth 令牌仅保存在您本地，用于与 Gmail API 通信，且仅在您主动操作（如发送邮件、读取收件箱）时使用。</p>
+
+            <h2>3. 数据共享与披露</h2>
+            <p>我们不会与任何第三方共享您的信息，除非法律强制要求（例如应法院传票）。即使在这种情况下，我们也会在披露前尽可能通知您（除非法律禁止）。</p>
+
+            <h2>4. 数据存储与安全</h2>
+            <p>所有数据（包括 OAuth 令牌、邮件缓存等）均保存在您的本地设备上，由您完全掌控。我们不会在云端保存任何副本。我们采用操作系统提供的安全存储（如 Windows Credential Manager）来保护令牌，但您仍需自行确保设备安全。</p>
+
+            <h2>5. 用户权利</h2>
+            <p>由于我们不存储任何数据，您无需申请删除或导出数据——所有数据都在您本地，您随时可以通过卸载应用或手动清理目录来彻底删除。</p>
+
+            <h2>6. 第三方服务</h2>
+            <p>本应用使用 <strong>Google Gmail API</strong> 来实现邮件功能。您的邮件数据将直接与 Google 服务器交互，请参阅 <a href="https://policies.google.com/privacy" target="_blank">Google 隐私政策</a> 了解 Google 如何处理您的数据。</p>
+
+            <h2>7. Cookies 与跟踪</h2>
+            <p>本应用不使用任何 Cookie、网络信标或第三方跟踪工具。OAuth 流程中使用的临时状态参数仅存在于浏览器会话中，不会持久化。</p>
+
+            <h2>8. 变更通知</h2>
+            <p>如果我们对本政策进行重大变更，会通过应用内的更新日志或 GitHub Release 通知您。本页面顶部会显示“最后更新”日期。</p>
+
+            <h2>9. 联系方式</h2>
+            <div class="contact-box">
+                <p>📧 如有隐私相关问题，请通过 GitHub Issues 联系我们：<br>
+                <a href="https://github.com/ASimpUsr/SimpleEmailClientNEXT/issues" target="_blank">https://github.com/ASimpUsr/SimpleEmailClientNEXT/issues</a></p>
+                <p>您也可以直接查看项目源码，所有实现均为开源透明。</p>
+            </div>
+
+            <p style="margin-top: 1.2rem; font-size: 0.9rem; color: #888;">
+                本政策采用 <a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank">CC0</a> 协议，可自由复制修改。
+            </p>
+        </div>
+
+        <!-- 英文 -->
+        <div id="en" class="lang">
+            <p><strong>Last updated:</strong> August 24, 2026</p>
+
+            <h2>1. Data Collection</h2>
+            <p><strong>This application does not collect, store, or upload any of your personal data.</strong></p>
+            <p>When you sign in via Gmail OAuth, it is used solely to obtain an access token for sending and receiving emails. All operations are performed locally on your device. Your emails, contacts, attachments, etc., are never transmitted to our servers.</p>
+
+            <h2>2. Data Usage</h2>
+            <p>We do not use, analyze, or sell your data in any way. OAuth tokens are stored locally and used only for communication with the Gmail API when you perform actions (e.g., sending emails, reading your inbox).</p>
+
+            <h2>3. Data Sharing and Disclosure</h2>
+            <p>We do not share your information with any third party unless legally required (e.g., in response to a court subpoena). Even then, we will notify you before disclosure if legally permitted.</p>
+
+            <h2>4. Data Storage and Security</h2>
+            <p>All data (including OAuth tokens, email caches, etc.) is stored locally on your device and is entirely under your control. We do not keep any copies in the cloud. We use operating system provided secure storage (e.g., Windows Credential Manager) to protect tokens, but you are still responsible for securing your device.</p>
+
+            <h2>5. User Rights</h2>
+            <p>Because we do not store any data, you do not need to request deletion or export – all data is on your device, and you can delete it completely at any time by uninstalling the app or manually clearing its directory.</p>
+
+            <h2>6. Third-Party Services</h2>
+            <p>This application uses the <strong>Google Gmail API</strong> to provide email functionality. Your email data will interact directly with Google's servers. Please refer to <a href="https://policies.google.com/privacy" target="_blank">Google's Privacy Policy</a> to understand how Google handles your data.</p>
+
+            <h2>7. Cookies and Tracking</h2>
+            <p>This application does not use any cookies, web beacons, or third‑party tracking tools. Temporary state parameters used during OAuth flow exist only in the browser session and are not persisted.</p>
+
+            <h2>8. Changes to This Policy</h2>
+            <p>If we make material changes to this policy, we will notify you via in-app changelog or GitHub Release. The "Last updated" date at the top of this page will reflect the revision.</p>
+
+            <h2>9. Contact</h2>
+            <div class="contact-box">
+                <p>📧 For privacy‑related questions, please contact us via GitHub Issues:<br>
+                <a href="https://github.com/ASimpUsr/SimpleEmailClientNEXT/issues" target="_blank">https://github.com/ASimpUsr/SimpleEmailClientNEXT/issues</a></p>
+                <p>You may also review the project source code – all implementation is open and transparent.</p>
+            </div>
+
+            <p style="margin-top: 1.2rem; font-size: 0.9rem; color: #888;">
+                This policy is released under the <a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank">CC0</a> license, free to copy and modify.
+            </p>
+        </div>
+    </div>
+
+    <footer>
+        <span>© 2026 ASimpUsr · <a href="https://asimpusr.github.io/SECNWebside/">首页 / Home</a></span>
+        <span>
+            <a href="https://github.com/ASimpUsr/SimpleEmailClientNEXT">GitHub</a> ·
+            <a href="https://asimpusr.github.io/SECNWebside/privacy.html">隐私 / Privacy</a>
+        </span>
+    </footer>
+</div>
+
+<script>
+    function switchLang(lang) {
+        document.querySelectorAll('.content .lang').forEach(el => el.classList.remove('active'));
+        document.querySelectorAll('.lang-switch button').forEach(btn => btn.classList.remove('active'));
+        document.getElementById(lang).classList.add('active');
+        if (lang === 'zh') document.getElementById('lang-zh').classList.add('active');
+        else document.getElementById('lang-en').classList.add('active');
+    }
+</script>
 </body>
 </html>
